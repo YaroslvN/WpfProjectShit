@@ -7,8 +7,46 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" FontSize="20">
     <Grid>
-        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="500" Height="300">
-           
+        <Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Login Panel -->
+                <Border Grid.Column="0" Background="#E0E0E0" Margin="20" Padding="20" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Text="Login" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                        <Label Content="Username:"/>
+                        <TextBox Name="txtLoginUsername" Width="200" Margin="0,0,0,10"/>
+
+                        <Label Content="Password:"/>
+                        <PasswordBox Name="txtLoginPassword" Width="200" Margin="0,0,0,10"/>
+
+                        <Button Content="Login" Width="100" Height="30" Click="LoginButton_Click"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Registration Panel -->
+                <Border Grid.Column="1" Background="#C0C0C0" Margin="20" Padding="20" CornerRadius="10">
+                    <StackPanel>
+                        <TextBlock Text="Registration" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
+
+                        <Label Content="Username:"/>
+                        <TextBox Name="txtRegisterUsername" Width="200" Margin="0,0,0,10"/>
+
+                        <Label Content="Password:"/>
+                        <PasswordBox Name="txtRegisterPassword" Width="200" Margin="0,0,0,10"/>
+
+                        <Label Content="Confirm Password:"/>
+                        <PasswordBox Name="txtRegisterConfirmPassword" Width="200" Margin="0,0,0,10"/>
+
+                        <Button Content="Register" Width="100" Height="30" Click="RegisterButton_Click"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
         </Grid>
 
     </Grid>

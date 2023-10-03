@@ -24,5 +24,29 @@ namespace YroslavFirstProjectGIT
         {
             InitializeComponent();
         }
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            string username = txtLoginUsername.Text;
+            string password = txtLoginPassword.Password;
+
+            
+
+            MessageBox.Show($"Login successful!\nUsername: {username}", "Success");
+        }
+
+        private void RegisterButton_Click(object sender, RoutedEventArgs e)
+        {
+            string username = txtRegisterUsername.Text;
+            string password = txtRegisterPassword.Password;
+            string confirmPassword = txtRegisterConfirmPassword.Password;
+
+            if (true)
+            {
+                MessageBox.Show($"Registration successful!\nUsername: {username}\nPassword: {password}", "Success");
+            }
+
+
+           
+        }
     }
 }
